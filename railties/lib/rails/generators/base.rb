@@ -51,6 +51,10 @@ module Rails
         Rails::Generators.hide_namespace(namespace)
       end
 
+      def self.perform(args, config) # :nodoc:
+        start(args, config)
+      end
+
       # Invoke a generator based on the value supplied by the user to the
       # given option named "name". A class option is created when this method
       # is invoked and you can set a hash to customize it.
